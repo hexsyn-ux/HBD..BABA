@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Baba | A Special Tribute by Wali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-black: #000000;
+            --midnight-blue: #030712;
+            --royal-sapphire: #1d4ed8;
+            --dark-crimson: #1c0308;
+            --vibrant-crimson: #dc2626;
+            --rose-silver: #f1f5f9;
+            --rose-gold: #fecdd3;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: var(--rose-silver);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .font-cinzel { font-family: 'Cinzel', serif; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+
+        /* Pure GPU-Accelerated Aurora Mesh Backdrop */
+        .aurora-layer {
+            position: fixed;
+            inset: -20%;
+            z-index: 0;
+            pointer-events: none;
+            background: 
+                radial-gradient(circle at 20% 25%, rgba(29, 78, 216, 0.22) 0%, transparent 45%),
+                radial-gradient(circle at 80% 75%, rgba(220, 38, 38, 0.24) 0%, transparent 48%),
+                radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.65) 0%, #000000 85%);
+            will-change: transform;
+            animation: auroraDrift 18s ease-in-out infinite alternate;
+        }
+
+        @keyframes auroraDrift {
+            0% { transform: translate3d(-2%, -2%, 0) scale(1); }
+            50% { transform: translate3d(2%, 1%, 0) scale(1.04); }
+            100% { transform: translate3d(-1%, 3%, 0) scale(1.02); }
+        }
+
+        /* Metallic Silver, Sapphire & Crimson Gradient Typography */
+        .text-royal-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #fecdd3 35%, #f87171 68%, #60a5fa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Ultra-Smooth Glass Card with Dual Blue/Crimson Border Glow */
+        .royal-glass-card {
+            background: linear-gradient(155deg, rgba(15, 23, 42, 0.78) 0%, rgba(28, 3, 8, 0.86) 55%, rgba(0, 0, 0, 0.94) 100%);
+            border: 1px solid rgba(220, 38, 38, 0.35);
+            box-shadow: 
+                0 25px 60px rgba(0, 0, 0, 0.9),
+                0 0 40px rgba(29, 78, 216, 0.14),
+                inset 0 1px 0 rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            will-change: transform, opacity;
+        }
+
+        /* Hardware-Accelerated Primary Action Button (Crimson -> Midnight Sapphire) */
+        .btn-royal-primary {
+            background: linear-gradient(135deg, #dc2626 0%, #7f1d1d 48%, #1e3a8a 100%);
+            color: #ffffff;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            border: 1px solid rgba(254, 205, 211, 0.38);
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.38), 0 0 20px rgba(29, 78, 216, 0.25);
+            position: relative;
+            overflow: hidden;
+            will-change: transform;
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn-royal-primary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+            transform: translate3d(-200%, 0, 0) skewX(-22deg);
+            animation: smoothSheen 3.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+            pointer-events: none;
+        }
+
+        .btn-royal-primary:hover {
+            transform: translate3d(0, -3px, 0) scale(1.015);
+            box-shadow: 0 16px 38px rgba(220, 38, 38, 0.55), 0 0 28px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-royal-primary:active {
+            transform: translate3d(0, 1px, 0) scale(0.985);
+        }
+
+        /* Secondary Midnight Sapphire Outline Button */
+        .btn-sapphire-outline {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(28, 3, 8, 0.85) 100%);
+            border: 1px solid rgba(96, 165, 250, 0.45);
+            color: #e2e8f0;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            will-change: transform;
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-sapphire-outline:hover {
+            transform: translate3d(0, -3px, 0) scale(1.015);
+            border-color: #93c5fd;
+            box-shadow: 0 12px 28px rgba(29, 78, 216, 0.35);
+            color: #ffffff;
+        }
+
+        .btn-sapphire-outline:active {
+            transform: translate3d(0, 1px, 0) scale(0.985);
+        }
+
+        @keyframes smoothSheen {
+            0% { transform: translate3d(-220%, 0, 0) skewX(-22deg); }
+            45%, 100% { transform: translate3d(320%, 0, 0) skewX(-22deg); }
+        }
+
+        /* Buttery Cubic-Bezier Stage & Card Transitions */
+        @keyframes smoothRevealUp {
+            0% {
+                opacity: 0;
+                transform: translate3d(0, 26px, 0) scale(0.97);
+            }
+            100% {
+                opacity: 1;
+                transform: translate3d(0, 0, 0) scale(1);
+            }
+        }
+
+        .animate-reveal-up {
+            animation: smoothRevealUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.22s; }
+        .delay-300 { animation-delay: 0.34s; }
+
+        /* Gentle Floral Emblem Breathing (Pure Transform) */
+        @keyframes emblemFloat {
+            0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+            50% { transform: translate3d(0, -6px, 0) scale(1.04); }
+        }
+
+        .animate-emblem {
+            will-change: transform;
+            animation: emblemFloat 5s ease-in-out infinite;
+        }
+
+        /* Official Approval Stamp Slam (Pure Transform + Opacity) */
+        @keyframes stampSlam {
+            0% { opacity: 0; transform: translate3d(0, 0, 0) scale(2.6) rotate(-14deg); }
+            65% { opacity: 1; transform: translate3d(0, 0, 0) scale(0.94) rotate(-3deg); }
+            100% { opacity: 1; transform: translate3d(0, 0, 0) scale(1) rotate(-4deg); }
+        }
+
+        .animate-stamp {
+            will-change: transform, opacity;
+            animation: stampSlam 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Glowing BBQ Highlight Pill */
+        .bbq-highlight-badge {
+            background: linear-gradient(90deg, rgba(220, 38, 38, 0.22) 0%, rgba(29, 78, 216, 0.22) 100%);
+            border: 1px solid rgba(248, 113, 113, 0.5);
+            box-shadow: 0 0 22px rgba(220, 38, 38, 0.22);
+        }
+
+        .royal-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), rgba(220, 38, 38, 0.75), rgba(59, 130, 246, 0.5), transparent);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 relative selection:bg-red-600/40 selection:text-white">
+
+    <!-- Ambient GPU Aurora Layer -->
+    <div class="aurora-layer"></div>
+
+    <!-- Unified 60fps HTML5 Canvas (Aurora Orbs, Falling Rose Petals & Fireworks) -->
+    <canvas id="royalCanvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
+    <!-- Non-Blocking Toast Notification -->
+    <div id="toastBanner" class="fixed top-5 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 transition-all duration-500 ease-out transform -translate-y-4 w-[92%] max-w-md">
+        <div class="bg-[#090d16]/95 border border-red-500/60 text-slate-100 px-5 py-3 rounded-full shadow-[0_12px_32px_rgba(220,38,38,0.4)] flex items-center justify-center gap-2.5 text-xs sm:text-sm font-semibold text-center backdrop-blur-md">
+            <span>👑</span>
+            <span id="toastText">Duayein aur Mohabbat Bhej Di Gayi!</span>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="relative z-10 w-full max-w-2xl mx-auto my-auto">
+
+        <!-- =========================================================
+             SCREEN 1: ENTRANCE SCREEN
+             ========================================================= -->
+        <section id="screen1" class="royal-glass-card rounded-3xl p-8 sm:p-12 text-center space-y-7 animate-reveal-up">
+            <!-- Glowing Floral & Crown Emblem SVG -->
+            <div class="flex justify-center pt-1">
+                <div class="relative w-28 h-28 sm:w-32 sm:h-32 flex items-center justify-center animate-emblem">
+                    <div class="absolute inset-2 rounded-full bg-gradient-to-tr from-blue-600/25 to-red-600/30 blur-xl"></div>
+                    <svg class="w-24 h-24 sm:w-28 sm:h-28" viewBox="0 0 120 120">
+                        <!-- Midnight Blue & Crimson Outer Ring -->
+                        <circle cx="60" cy="60" r="52" fill="none" stroke="url(#ringGrad)" stroke-width="1.5" stroke-dasharray="6 4" />
+                        <defs>
+                            <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#3b82f6" />
+                                <stop offset="50%" stop-color="#fecdd3" />
+                                <stop offset="100%" stop-color="#dc2626" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Emerald & Sapphire Leaves -->
+                        <path d="M60,88 C34,96 18,80 26,62 C38,66 50,76 60,88 Z" fill="#0f2942" stroke="#3b82f6" stroke-width="1.2"/>
+                        <path d="M60,88 C86,96 102,80 94,62 C82,66 70,76 60,88 Z" fill="#0f2942" stroke="#3b82f6" stroke-width="1.2"/>
+                        <!-- Layered Crimson Rose -->
+                        <g transform="translate(60,56)">
+                            <path d="M0,-40 C24,-40 40,-16 25,11 C12,34 -12,34 -25,11 C-40,-16 -24,-40 0,-40 Z" fill="#450a0a" stroke="#dc2626" stroke-width="1.2"/>
+                            <path d="M0,-32 C19,-32 32,-12 20,9 C10,27 -10,27 -20,9 C-32,-12 -19,-32 0,-32 Z" fill="#991b1b" transform="rotate(35)"/>
+                            <path d="M0,-23 C14,-23 23,-8 14,7 C7,19 -7,19 -14,7 C-23,-8 -14,-23 0,-23 Z" fill="#dc2626" transform="rotate(-25)"/>
+                            <path d="M0,-14 C9,-14 14,-4 9,5 C4,12 -4,12 -9,5 C-14,-4 -9,-14 0,-14 Z" fill="#f87171"/>
+                            <circle cx="0" cy="-2" r="4.5" fill="#fecdd3"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Mention 1 of Wali -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-blue-500/40 text-rose-200 text-xs sm:text-sm font-bold tracking-[0.22em] uppercase shadow-[0_0_20px_rgba(29,78,216,0.25)]">
+                <span>✦</span>
+                <span>A SPECIAL TRIBUTE BY WALI</span>
+                <span>✦</span>
+            </div>
+
+            <!-- Main Heading -->
+            <div class="space-y-3">
+                <h1 class="text-3xl sm:text-5xl font-cinzel font-black tracking-wide text-royal-gradient leading-tight">
+                    HAPPY BIRTHDAY, BABA
+                </h1>
+                <p class="text-slate-300 font-playfair italic text-base sm:text-lg max-w-md mx-auto">
+                    "Aapka saya hamesha hamare sar par salamat rahe, Ameen."
+                </p>
+            </div>
+
+            <div class="royal-divider w-3/4 mx-auto"></div>
+
+            <!-- Single Entrance Action Button -->
+            <div class="pt-1">
+                <button id="openMessageBtn" class="btn-royal-primary w-full sm:w-auto px-10 py-4 rounded-2xl text-sm sm:text-base uppercase cursor-pointer">
+                    OPEN WALI'S MESSAGE 👑
+                </button>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             SCREEN 2: MAIN TRIBUTE HUB & SEQUENTIAL REVEAL
+             ========================================================= -->
+        <section id="screen2" class="royal-glass-card rounded-3xl p-6 sm:p-10 space-y-6 hidden">
+            <!-- Header -->
+            <div class="text-center space-y-1.5">
+                <span class="text-xs uppercase tracking-[0.26em] text-blue-300 font-semibold">Dil Ki Gehraiyon Se</span>
+                <h2 class="text-2xl sm:text-4xl font-cinzel font-extrabold text-royal-gradient">
+                    HAPPY BIRTHDAY, BABA
+                </h2>
+            </div>
+
+            <div class="royal-divider"></div>
+
+            <!-- Main Greeting Card (Mention 2 of Wali) -->
+            <div class="bg-gradient-to-br from-[#060b19]/95 via-[#160409]/95 to-black border border-red-500/30 rounded-2xl p-5 sm:p-6 space-y-4">
+                <p class="text-slate-100 text-sm sm:text-base leading-relaxed">
+                    Happy Birthday Baba! Aap <span class="text-rose-300 font-bold">Wali</span> ki zindagi ka sabse bara sahara aur pehchan hain. Aapki mehnat, sabar aur be-loss mohabbat ki wajah se aaj hum fakhr se sar utha kar chalte hain.
+                </p>
+
+                <!-- BBQ Highlight 1: Teaser Badge -->
+                <div class="bbq-highlight-badge rounded-xl px-4 py-2.5 flex items-center justify-center gap-2 text-center">
+                    <span class="text-xs sm:text-sm font-bold tracking-wide text-rose-200">
+                        Special Birthday Demand: <span class="text-amber-300 font-extrabold underline decoration-red-500">BARBEQUE TREAT</span> 🔥
+                    </span>
+                </div>
+            </div>
+
+            <!-- Action Button 1: Read Dua & Celebrate -->
+            <div id="duaActionWrapper">
+                <button id="readDuaBtn" class="btn-royal-primary w-full py-4 px-6 rounded-2xl text-sm sm:text-base uppercase flex items-center justify-center gap-2.5 cursor-pointer">
+                    <span>🤲</span>
+                    <span>READ DUA & CELEBRATE</span>
+                </button>
+            </div>
+
+            <!-- Sequential Unveiled Section (Revealed on clicking Read Dua & Celebrate) -->
+            <div id="celebrationReveal" class="hidden space-y-4">
+                
+                <!-- Card A: Special Dua -->
+                <div class="p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-[#0c162d]/90 via-[#24060d]/90 to-black border border-blue-400/40 shadow-[0_0_28px_rgba(29,78,216,0.2)] space-y-2 animate-reveal-up">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold uppercase tracking-widest text-blue-300">🤲 KHASOOSI DUA FOR BABA</span>
+                        <span class="text-sm">✨</span>
+                    </div>
+                    <p class="text-white font-playfair text-base sm:text-lg leading-relaxed">
+                        "Allah Paak aapko hamesha sehat, lambi zindagi, aur dheron khushiyan ata farmaye. Aapka saya hamesha <span class="text-rose-300 font-semibold">Wali</span> aur poore ghar par salamat rahe. Ameen."
+                    </p>
+                </div>
+
+                <!-- Card B: Hero Tribute (Mention 3 of Wali) & BBQ Highlight 2 -->
+                <div class="p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-[#24060d]/90 via-[#0c162d]/85 to-black border border-red-500/40 space-y-3.5 animate-reveal-up delay-100">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold uppercase tracking-widest text-rose-300">👑 OUR REAL-LIFE HERO</span>
+                        <span class="text-sm">🌹</span>
+                    </div>
+                    <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+                        <span class="text-blue-300 font-bold">Wali</span> ke liye aap hamesha ek real-life hero aur mentor rahe hain. Aapki muskurahat hamari sabse bari daulat hai.
+                    </p>
+                    
+                    <!-- BBQ Highlight 2: Highlighted Box -->
+                    <div class="p-3.5 rounded-xl bg-black/75 border border-red-500/50 text-center shadow-[inset_0_0_16px_rgba(220,38,38,0.22)]">
+                        <p class="text-xs sm:text-sm font-semibold text-rose-100">
+                            "Khushi ka moka hai, toh shandar <span class="text-amber-300 font-extrabold tracking-wide">BARBEQUE TREAT</span> toh banti hai!" 🍢🔥
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Final Surprise Button -->
+                <div class="pt-2 animate-reveal-up delay-200">
+                    <button id="unlockSurpriseBtn" class="btn-royal-primary w-full py-4 px-6 rounded-2xl text-sm sm:text-base uppercase flex items-center justify-center gap-2.5 cursor-pointer">
+                        <span>🎁</span>
+                        <span>UNLOCK FINAL SURPRISE</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             SCREEN 3: VIP BBQ TREAT FINALE VOUCHER
+             ========================================================= -->
+        <section id="screen3" class="royal-glass-card rounded-3xl p-6 sm:p-10 space-y-6 hidden">
+            <!-- VIP Header -->
+            <div class="text-center space-y-2">
+                <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-gradient-to-r from-blue-950 to-red-950 border border-blue-400/50 text-rose-200 text-xs font-bold tracking-widest uppercase">
+                    <span>👑</span> EXCLUSIVE BIRTHDAY PASS
+                </div>
+                <!-- BBQ Highlight 3: Grand Finale Pass -->
+                <h2 class="text-2xl sm:text-4xl font-cinzel font-black text-royal-gradient pt-1 leading-snug">
+                    OFFICIAL VIP PASS: GRAND BARBEQUE TREAT 🍢🔥
+                </h2>
+            </div>
+
+            <!-- Voucher Card -->
+            <div class="relative bg-gradient-to-b from-[#060b19] to-[#140307] border-2 border-dashed border-red-500/65 rounded-2xl p-6 sm:p-8 text-center space-y-4 shadow-[inset_0_0_30px_rgba(29,78,216,0.18)]">
+                <div class="text-4xl sm:text-5xl">🔥🍖🍢</div>
+                <p class="text-slate-100 text-base sm:text-lg leading-relaxed font-medium">
+                    "Gift toh aap khud hain hamare liye... Lakin is khushi ke din ek shandar <span class="text-amber-300 font-extrabold underline decoration-red-500">BARBEQUE TREAT</span> toh banti hai! Kab chal rahe hain phir, Baba?"
+                </p>
+
+                <!-- Mention 4 of Wali (Final Signature) -->
+                <div class="pt-2 font-playfair italic font-bold text-rose-300 text-base sm:text-lg">
+                    — Aapka Beta, Wali
+                </div>
+
+                <!-- Slammed Approval Stamp -->
+                <div id="stampWrapper" class="hidden pt-3 flex justify-center">
+                    <div id="approvalStamp" class="inline-block border-4 border-emerald-400 text-emerald-300 bg-emerald-950/85 px-6 py-2 rounded-xl font-cinzel font-black text-base sm:text-xl tracking-widest uppercase shadow-[0_0_25px_rgba(16,185,129,0.45)]">
+                        APPROVED BY BABA ✅
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Confirmation Buttons -->
+            <div class="space-y-3">
+                <p class="text-center text-xs uppercase tracking-widest text-blue-300/85 font-semibold">
+                    Baba, apna hukam sunayein:
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                    <button id="tonightBtn" class="btn-royal-primary py-4 px-4 rounded-2xl text-sm font-bold uppercase cursor-pointer">
+                        AAJ RAAT DONE HAI! 🔥
+                    </button>
+                    <button id="weekendBtn" class="btn-sapphire-outline py-4 px-4 rounded-2xl text-sm font-bold uppercase cursor-pointer">
+                        WEEKEND PAR PAKKA! 🍢
+                    </button>
+                </div>
+            </div>
+
+            <!-- Confirmation Decree Message -->
+            <div id="decreeBox" class="hidden text-center p-4 rounded-xl bg-slate-900/90 border border-blue-500/40 animate-reveal-up">
+                <p id="decreeText" class="text-sm sm:text-base font-semibold text-rose-200"></p>
+            </div>
+
+            <div class="royal-divider"></div>
+
+            <!-- Back Navigation -->
+            <div class="text-center">
+                <button id="backBtn" class="text-xs sm:text-sm text-slate-400 hover:text-white transition-colors inline-flex items-center gap-1.5 py-2 px-4 cursor-pointer">
+                    <span>←</span>
+                    <span>BACK TO WALI'S MESSAGE</span>
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        /* =========================================================
+           1. UNIFIED 60FPS CANVAS ENGINE (AURORA ORBS, PETALS & FIREWORKS)
+           Zero shadowBlur overhead on per-frame particles for locked 60fps
+           ========================================================= */
+        const canvas = document.getElementById('royalCanvas');
+        const ctx = canvas.getContext('2d', { alpha: true });
+
+        let width = 0;
+        let height = 0;
+
+        function resizeCanvas() {
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width * dpr;
+            canvas.height = height * dpr;
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+        window.addEventListener('resize', resizeCanvas, { passive: true });
+        resizeCanvas();
+
+        // Ambient Floating Midnight Blue & Crimson Nebula Orbs
+        class AmbientOrb {
+            constructor(isBlue) {
+                this.isBlue = isBlue;
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.radius = Math.min(width, height) * (0.28 + Math.random() * 0.18);
+                this.vx = (Math.random() - 0.5) * 0.35;
+                this.vy = (Math.random() - 0.5) * 0.35;
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if (this.x < -this.radius * 0.5 || this.x > width + this.radius * 0.5) this.vx *= -1;
+                if (this.y < -this.radius * 0.5 || this.y > height + this.radius * 0.5) this.vy *= -1;
+            }
+            draw() {
+                const grad = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
+                if (this.isBlue) {
+                    grad.addColorStop(0, 'rgba(29, 78, 216, 0.16)');
+                    grad.addColorStop(1, 'rgba(29, 78, 216, 0)');
+                } else {
+                    grad.addColorStop(0, 'rgba(220, 38, 38, 0.16)');
+                    grad.addColorStop(1, 'rgba(220, 38, 38, 0)');
+                }
+                ctx.fillStyle = grad;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        // Silky Falling Crimson & Rose-Gold Petals
+        class SilkyPetal {
+            constructor(initial = false) {
+                this.reset(initial);
+            }
+            reset(initial = false) {
+                this.x = Math.random() * width;
+                this.y = initial ? Math.random() * height : -20;
+                this.size = 5 + Math.random() * 6;
+                this.speedY = 0.65 + Math.random() * 0.95;
+                this.speedX = (Math.random() - 0.5) * 0.45;
+                this.phase = Math.random() * Math.PI * 2;
+                this.phaseSpeed = 0.015 + Math.random() * 0.02;
+                this.rotation = Math.random() * Math.PI * 2;
+                this.rotSpeed = (Math.random() - 0.5) * 0.025;
+                this.alpha = 0.35 + Math.random() * 0.45;
+                const palette = ['#dc2626', '#991b1b', '#f87171', '#fecdd3'];
+                this.color = palette[Math.floor(Math.random() * palette.length)];
+            }
+            update() {
+                this.y += this.speedY;
+                this.phase += this.phaseSpeed;
+                this.x += this.speedX + Math.sin(this.phase) * 0.55;
+                this.rotation += this.rotSpeed;
+
+                if (this.y > height + 25 || this.x < -30 || this.x > width + 30) {
+                    this.reset(false);
+                }
+            }
+            draw() {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate(this.rotation);
+                ctx.scale(Math.max(0.3, Math.abs(Math.cos(this.phase))), 1);
+                ctx.globalAlpha = this.alpha;
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.moveTo(0, -this.size);
+                ctx.bezierCurveTo(this.size, -this.size * 0.7, this.size, this.size * 0.5, 0, this.size);
+                ctx.bezierCurveTo(-this.size, this.size * 0.5, -this.size, -this.size * 0.7, 0, -this.size);
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        // Smooth Crimson & Sapphire Firework Particle
+        class FireworkParticle {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                const angle = Math.random() * Math.PI * 2;
+                const velocity = 2.2 + Math.random() * 7.2;
+                this.vx = Math.cos(angle) * velocity;
+                this.vy = Math.sin(angle) * velocity - 1.8;
+                this.drag = 0.965;
+                this.gravity = 0.11;
+                this.alpha = 1;
+                this.decay = 0.011 + Math.random() * 0.01;
+                this.size = 2.2 + Math.random() * 3.2;
+                const colors = ['#dc2626', '#ef4444', '#3b82f6', '#60a5fa', '#fecdd3', '#fbbf24'];
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+            }
+            update() {
+                this.vx *= this.drag;
+                this.vy = this.vy * this.drag + this.gravity;
+                this.x += this.vx;
+                this.y += this.vy;
+                this.alpha -= this.decay;
+            }
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = Math.max(0, this.alpha);
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        const orbs = [
+            new AmbientOrb(true),
+            new AmbientOrb(false),
+            new AmbientOrb(true)
+        ];
+
+        const petalTotal = Math.min(28, Math.floor(width / 28));
+        const petals = Array.from({ length: petalTotal }, () => new SilkyPetal(true));
+        let particles = [];
+
+        function launchBurst(originX, originY, count = 65) {
+            for (let i = 0; i < count; i++) {
+                particles.push(new FireworkParticle(originX, originY));
+            }
+        }
+
+        function launchGrandCelebration() {
+            launchBurst(width * 0.28, height * 0.36, 55);
+            setTimeout(() => launchBurst(width * 0.72, height * 0.36, 55), 180);
+            setTimeout(() => launchBurst(width * 0.5, height * 0.28, 75), 360);
+        }
+
+        function renderLoop() {
+            ctx.clearRect(0, 0, width, height);
+
+            for (let i = 0; i < orbs.length; i++) {
+                orbs[i].update();
+                orbs[i].draw();
+            }
+
+            for (let i = 0; i < petals.length; i++) {
+                petals[i].update();
+                petals[i].draw();
+            }
+
+            for (let i = particles.length - 1; i >= 0; i--) {
+                particles[i].update();
+                particles[i].draw();
+                if (particles[i].alpha <= 0) {
+                    particles.splice(i, 1);
+                }
+            }
+
+            requestAnimationFrame(renderLoop);
+        }
+
+        window.addEventListener('load', () => {
+            renderLoop();
+        });
+
+        /* =========================================================
+           2. STREAMLINED UI & SCREEN TRANSITION LOGIC
+           ========================================================= */
+        const screen1 = document.getElementById('screen1');
+        const screen2 = document.getElementById('screen2');
+        const screen3 = document.getElementById('screen3');
+
+        const openMessageBtn = document.getElementById('openMessageBtn');
+        const readDuaBtn = document.getElementById('readDuaBtn');
+        const celebrationReveal = document.getElementById('celebrationReveal');
+        const unlockSurpriseBtn = document.getElementById('unlockSurpriseBtn');
+
+        const tonightBtn = document.getElementById('tonightBtn');
+        const weekendBtn = document.getElementById('weekendBtn');
+        const stampWrapper = document.getElementById('stampWrapper');
+        const approvalStamp = document.getElementById('approvalStamp');
+        const decreeBox = document.getElementById('decreeBox');
+        const decreeText = document.getElementById('decreeText');
+        const backBtn = document.getElementById('backBtn');
+
+        const toastBanner = document.getElementById('toastBanner');
+        const toastText = document.getElementById('toastText');
+        let toastTimeout;
+
+        function showToast(message) {
+            toastText.textContent = message;
+            toastBanner.classList.remove('opacity-0', '-translate-y-4');
+            toastBanner.classList.add('opacity-100', 'translate-y-0');
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toastBanner.classList.remove('opacity-100', 'translate-y-0');
+                toastBanner.classList.add('opacity-0', '-translate-y-4');
+            }, 3000);
+        }
+
+        function switchScreen(fromEl, toEl) {
+            fromEl.classList.add('hidden');
+            toEl.classList.remove('hidden');
+            toEl.classList.remove('animate-reveal-up');
+            void toEl.offsetWidth;
+            toEl.classList.add('animate-reveal-up');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Step 1: Entrance -> Main Hub
+        openMessageBtn.addEventListener('click', () => {
+            switchScreen(screen1, screen2);
+            launchBurst(width * 0.5, height * 0.35, 60);
+        });
+
+        // Step 2: Read Dua & Celebrate -> Unveils Dua, Hero Card & Final Surprise Button
+        readDuaBtn.addEventListener('click', () => {
+            launchGrandCelebration();
+            showToast('Dheron Duayein aur Pyar Baba Ke Naam! 🤲✨');
+
+            if (celebrationReveal.classList.contains('hidden')) {
+                celebrationReveal.classList.remove('hidden');
+                readDuaBtn.innerHTML = '<span>✨</span><span>CELEBRATE AGAIN</span>';
+                setTimeout(() => {
+                    celebrationReveal.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 150);
+            }
+        });
+
+        // Step 3: Unlock Final Surprise -> VIP BBQ Voucher Screen
+        unlockSurpriseBtn.addEventListener('click', () => {
+            switchScreen(screen2, screen3);
+            launchGrandCelebration();
+        });
+
+        // Step 4: BBQ Treat Confirmation Buttons
+        function confirmBbqPass(decreeMessage, toastMessage) {
+            stampWrapper.classList.remove('hidden');
+            approvalStamp.classList.remove('animate-stamp');
+            void approvalStamp.offsetWidth;
+            approvalStamp.classList.add('animate-stamp');
+
+            decreeText.textContent = decreeMessage;
+            decreeBox.classList.remove('hidden');
+
+            launchGrandCelebration();
+            showToast(toastMessage);
+        }
+
+        tonightBtn.addEventListener('click', () => {
+            confirmBbqPass(
+                'Hukam Sar Aankhon Par! Wali aaj raat ki shandar Barbeque Treat ke liye bilkul tayyar hai! 🔥🍖',
+                'Aaj raat ki Barbeque Treat pakki ho gayi! 🔥'
+            );
+        });
+
+        weekendBtn.addEventListener('click', () => {
+            confirmBbqPass(
+                'Done Ho Gaya! Is Weekend par Baba ki taraf se Grand Barbeque Treat lock hai! 🍢👑',
+                'Weekend Barbeque Treat lock ho gayi! 🍢'
+            );
+        });
+
+        // Back to Main Message
+        backBtn.addEventListener('click', () => {
+            switchScreen(screen3, screen2);
+        });
+    </script>
+</body>
+</html>
